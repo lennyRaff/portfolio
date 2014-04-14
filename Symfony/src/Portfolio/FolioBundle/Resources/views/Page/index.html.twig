@@ -1,0 +1,47 @@
+{% spaceless %}
+	{# src/Portfolio/FolioBundle/Resources/views/Page/index.html.twig #}
+	{% extends 'PortfolioFolioBundle::layout.html.twig' %}
+	{% block stylesheets %}
+		{{ parent() }}
+		{% stylesheets '@PortfolioFolioBundle/Resources/public/css/portfolio_main.css' filter='cssrewrite' %}
+			<link rel="stylesheet" href="{{ asset_url }}" />
+		{% endstylesheets %}
+	{% endblock %}
+	{% block body %}
+		{% block nav %}
+			<div id="wrapper">
+				<div id="loaderContainer" class="loader">
+					<h1>Get ready... <span></span></h1>
+					<div id="siteLoader"></div>
+				</div>
+				<section id="siteContainer">
+					<nav id="main_nav"><a href="#!/whoiam" rel="Leonard Rafferty web developer about me">WHO I AM</a><a href="#!/whatido" rel="Leonard Rafferty web developer what i do">WHAT I DO</a><a href="#!/experiments" rel="Leonard Rafferty web developer web experiments and blog">EXPERIMENTS</a><a href="#!/findme" rel="Leonard Rafferty web developer contact me details find me">FIND ME</a></nav>
+					<article id="whoiam" class="article">
+						<div id="whoiamcontent" class="container default-skin">
+							
+						</div>
+					</article>
+					<article id="whatido" class="article">
+						
+					</article>
+					<article id="experiments" class="article">
+						
+					</article>
+					<article id="findme" class="article">
+						
+					</article>
+				</section>
+			</div>
+		{% endblock %}
+		{% block javascripts %}
+			{% javascripts '@PortfolioFolioBundle/Resources/public/js/thirdparty/jquery-1.7.min.js'
+				'@PortfolioFolioBundle/Resources/public/js/thirdparty/jquery.easing.1.3.js'
+				'@PortfolioFolioBundle/Resources/public/js/thirdparty/jquery.ba-bbq.min.js'
+				'@PortfolioFolioBundle/Resources/public/js/thirdparty/d3.v3.min.js'
+				'@PortfolioFolioBundle/Resources/public/js/main.js'
+			%}
+				<script type="text/javascript" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+		{% endblock %}
+	{% endblock %}
+{% endspaceless %}

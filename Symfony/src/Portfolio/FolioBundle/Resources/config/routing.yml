@@ -1,0 +1,6 @@
+# src/Portfolio/FolioBundle/Resources/config/routing.yml
+PortfolioFolioBundle_homepage:
+    pattern:  /
+    defaults: { _controller: PortfolioFolioBundle:Page:index }
+    requirements:
+        _method:  GET
