@@ -98,9 +98,9 @@ var LEONARD = {
 				$(window).trigger('hashchange');
 				$('#loaderContainer h1').fadeOut(100);
 				$('#siteContainer').css('display', 'block');
-				/* $('.loader').fadeOut(1000, function() {
+				$('.loader').fadeOut(1000, function() {
 					$(this).remove();
-				}); */
+				});
 			});
 		  }
 	},

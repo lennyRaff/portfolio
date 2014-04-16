@@ -30,6 +30,14 @@
 					<article id="findme" class="article">
 						
 					</article>
+					<filter id="dropshadow" height="160%">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="5"></feGaussianBlur> <!-- stdDeviation is how much to blur -->
+						<feOffset dx="0" dy="3" result="offsetblur"></feOffset> <!-- how much to offset -->
+						<feMerge> 
+							<feMergeNode></feMergeNode> <!-- this contains the offset blurred image -->
+						<feMergeNode in="SourceGraphic"></feMergeNode> <!-- this contains the element that the filter is applied to -->
+						</feMerge>
+					</filter>
 				</section>
 			</div>
 		{% endblock %}
